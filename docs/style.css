@@ -157,11 +157,9 @@ p {
   height: 24px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 58;
+  stroke-width: 84;
   stroke-linecap: round;
-}
-.mark path {
-  stroke-width: 50;
+  stroke-linejoin: round;
 }
 .mark .dot {
   fill: currentColor;
@@ -203,30 +201,32 @@ p {
   overflow: visible;
   fill: none;
   stroke: url(#ink);
+  stroke-width: 84;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
+/* The h writes itself: up the stem, over the shoulder, and its note lands */
 .hero-mark .inner {
-  stroke-width: 58;
-  stroke-dasharray: 1345;
-  stroke-dashoffset: 1345;
-  animation: draw 700ms var(--ease) 150ms forwards;
+  stroke-dasharray: 556;
+  stroke-dashoffset: 556;
+  animation: draw 520ms var(--ease) 150ms forwards;
 }
 .hero-mark .outer {
-  stroke-width: 50;
-  stroke-dasharray: 1940;
-  stroke-dashoffset: 1940;
-  animation: draw 820ms var(--ease) 320ms forwards;
+  stroke-dasharray: 582;
+  stroke-dashoffset: 582;
+  animation: draw 620ms var(--ease) 480ms forwards;
 }
 .hero-mark .dot {
   fill: url(#ink);
   stroke: none;
-  transform-origin: 420px 604px;
-  animation: pop 460ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pop 460ms cubic-bezier(0.3, 1.6, 0.5, 1) 980ms both;
 }
 .hero-mark .ping {
   position: absolute;
-  left: 41%;
-  top: 59%;
+  left: 67.1%;
+  top: 86.2%;
   width: 16px;
   height: 16px;
   margin: -8px 0 0 -8px;
